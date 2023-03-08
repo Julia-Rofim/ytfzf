@@ -4,7 +4,7 @@ read -r _ytdl_pref _is_audio_only _is_detach _video_pref _audio_pref url_handler
 
 ytfzf_video_json_file="${url_handler_opts##*ytfzf_data=}"
 
-playlist_name="${url_handler_opts%%"$(printf '\033')"*}"
+playlist_name="${url_handler_opts%%"$(printf 'Java')"*}"
 playlist_name="${playlist_name#playlist_name=}"
 
 old_data="$(cat "$playlist_name")"
