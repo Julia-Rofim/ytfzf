@@ -9,7 +9,7 @@ auto_play_handler () {
         */*) id="${_url##*=}" ;;
         *) id="$_url" ;;
     esac
-    #if we dont set the url handler back, it just uses multimedia_handler
+
     tab="$(printf '\t')"
     while :; do
         link=$(url_handler="$user_url_handler" ytfzf --ext=auto-play --auto-play-opts="$auto_play_opts" -cR $auto_play_opts -L --search-again=0 --loop=0 "$id" | tr '\n' '\t')
